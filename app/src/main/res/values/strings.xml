@@ -1,0 +1,37 @@
+<resources>
+    <string name="empty" />
+    <string name="app_name">NDAstro</string>
+    <string name="nd_astro">ND Astro</string>
+    <string name="back">Navigate to the previous screen</string>
+
+    <string name="login_title">Login</string>
+    <string name="login_user_label">Email ID or Mobile Number</string>
+    <string name="login_password_label">Password</string>
+    <string name="login_button_label">Login</string>
+    <string name="hide_password">Password Visible</string>
+    <string name="show_password">Password Hidden</string>
+    <string name="forgot_password">Forgot Password?</string>
+
+    <string name="empty_user">Please enter your email or mobile number</string>
+    <string name="empty_password">Please enter your password</string>
+
+    <string name="no_account">Don\'t have an account?</string>
+    <string name="register">Register</string>
+
+    <string name="registration_title">Registration</string>
+    <string name="registration_email_label">Email ID</string>
+    <string name="registration_mobile_label">Mobile Number</string>
+    <string name="registration_password_label">Password</string>
+    <string name="registration_confirm_password_label">Confirm Password</string>
+    <string name="registration_button_label">Register</string>
+    <string name="back_login">Back to Login</string>
+
+    <string name="registration_empty_email">Please enter your email id</string>
+    <string name="registration_empty_mobile">Please enter your mobile number</string>
+    <string name="registration_empty_password">Please enter your password</string>
+    <string name="registration_empty_confirm_password">Please confirm your password</string>
+    <string name="registration_password_mismatch">Please enter the same password here as above</string>
+
+    <string name="dashboard_title">Welcome User</string>
+
+</resources>
