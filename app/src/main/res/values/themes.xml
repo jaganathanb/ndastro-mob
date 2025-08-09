@@ -1,5 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
-    <style name="Theme.NDAstro" parent="android:Theme.Material.Light.NoActionBar" />
+    <style name="Theme.NDAstro" parent="android:Theme.Material.Light.NoActionBar">
+        <!-- Splash background color -->
+        <item name="android:windowSplashScreenBackground">@color/white</item>
+
+        <!-- Animated logo -->
+        <item name="android:windowSplashScreenAnimatedIcon">@drawable/ic_logo_animated</item>
+
+        <!-- Animation duration -->
+        <item name="android:windowSplashScreenAnimationDuration">1000</item>
+
+        <!-- Theme applied after splash -->
+        <item name="postSplashScreenTheme">@style/Theme.NDAstro.PostSplash</item>
+    </style>
+
+    <style name="Theme.NDAstro.PostSplash" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:windowBackground">@color/white</item>
+    </style>
 </resources>
