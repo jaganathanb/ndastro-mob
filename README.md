@@ -1,6 +1,6 @@
 ![NDAstro](./images/dapps.png)
 
-# NDAstro: A Complete Guide to Secure Login, API Calls & Token Management in Jetpack Compose
+# NDAstro: Astrological App
 
 NDAstro is a **astrology mobile app** built using **Jetpack Compose** and **Kotlin**.  
 It provides a vast set of south indian astrology functionalities with at most accuracy. It has been using the **secure and scalable system** by following **MVVM + Clean Architecture**
