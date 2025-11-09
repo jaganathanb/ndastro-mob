@@ -1,50 +1,54 @@
 [versions]
 # Android and Kotlin Versions
-agp = "8.12.0"
-kotlin = "2.2.0"
-kotlinJvm = "2.2.0"
-kotlinSerialization = "2.2.0"
+agp = "8.13.0"
+coilNetworkOkhttp = "3.3.0"
+kotlin = "2.2.20"
+kotlinJvm = "2.2.20"
+kotlinSerialization = "2.2.20"
 
 # AndroidX Core and Libraries
-coreKtx = "1.16.0"
+coreKtx = "1.17.0"
 coreSplashscreen = "1.0.1"
-appcompat = "1.7.1"
 
 # Compose
-activityCompose = "1.10.1"
-composeBom = "2025.07.00"
-composeConstraintLayout = "1.1.1"
-composeNavigation = "2.9.2"
-composeViewModel = "2.9.2"
-material = "1.12.0"
+activityCompose = "1.11.0"
+composeBom = "2025.10.00"
+composeNavigation = "2.9.5"
 
 # Lifecycle and Coroutines
-lifecycleRuntimeKtx = "2.9.2"
-kotlinxCoroutinesCore = "1.10.2"
+lifecycleRuntimeKtx = "2.9.4"
 
 # Hilt and Dependency Injection
-hilt = "2.57"
-hiltComposeNavigation = "1.2.0"
+hilt = "2.57.2"
+hiltComposeNavigation = "1.3.0"
 ksp = "2.2.0-2.0.2"
 
 # Ktor and Networking
-ktor = "3.2.2"
+ktor = "3.3.1"
+
+# SVG
+coilCompose = "3.3.0"
+coilSvg = "3.3.0"
 
 # Data Storage - Jetpack DataStore and Security Crypto
 androidxDatastore = "1.1.7"
-securityCrypto = "1.1.0-beta01"
+securityCrypto = "1.1.0"
 
 # Testing
 junit = "4.13.2"
-junitVersion = "1.2.1"
-espressoCore = "3.6.1"
+junitVersion = "1.3.0"
+espressoCore = "3.7.0"
 
 # Code Quality
-ktlint = "13.0.0"
+ktlint = "13.1.0"
 
 # Protobuf
 protobuf = "0.9.5"
-uiTooling = "1.8.3"
+uiTooling = "1.9.3"
+materialIcons = "1.7.8"
+material3 = "1.4.0"
+runtime = "1.9.3"
+espressoIdlingResource = "3.7.0"
 
 [libraries]
 # AndroidX Core and Libraries
@@ -57,13 +61,13 @@ androidx-activity-compose = { group = "androidx.activity", name = "activity-comp
 androidx-compose-ui = { group = "androidx.compose.ui", name = "ui" }
 androidx-compose-ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
 androidx-compose-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
-androidx-compose-material3 = { group = "androidx.compose.material3", name = "material3" }
 androidx-compose-navigation = { group = "androidx.navigation", name = "navigation-compose", version.ref = "composeNavigation" }
 
 # Lifecycle and ViewModel
 androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
 
 # Hilt and Dependency Injection
+coil-network-okhttp = { module = "io.coil-kt.coil3:coil-network-okhttp", version.ref = "coilNetworkOkhttp" }
 hilt = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
 hilt-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "hilt" }
 androidx-hilt-compose-navigation = { group = "androidx.hilt", name = "hilt-navigation-compose", version.ref = "hiltComposeNavigation" }
@@ -75,6 +79,10 @@ ktor-client-logging = { group = "io.ktor", name = "ktor-client-logging", version
 ktor-client-content-negotiation = { group = "io.ktor", name = "ktor-client-content-negotiation", version.ref = "ktor" }
 ktor-serialization = { group = "io.ktor", name = "ktor-serialization-kotlinx-json", version.ref = "ktor" }
 ktor-auth = { group = "io.ktor", name = "ktor-client-auth", version.ref = "ktor" }
+
+# Coil
+coil-compose = { module = "io.coil-kt.coil3:coil-compose", version.ref = "coilCompose" }
+coil-svg = { module = "io.coil-kt.coil3:coil-svg", version.ref = "coilSvg" }
 
 # Data Storage - Jetpack DataStore and Security Crypto
 androidx-datastore-preferences = { module = "androidx.datastore:datastore-preferences", version.ref = "androidxDatastore" }
@@ -89,6 +97,11 @@ androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit
 
 # Material Design
 androidx-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling", version.ref = "uiTooling" }
+androidx-material3 = { group = "androidx.compose.material3", name = "material3", version.ref = "material3" }
+androidx-runtime = { group = "androidx.compose.runtime", name = "runtime", version.ref = "runtime" }
+androidx-compose-material-icons-core = { group = "androidx.compose.material", name = "material-icons-core", version.ref = "materialIcons" } # Or your specific icons version
+androidx-compose-material-icons-extended = { group = "androidx.compose.material", name = "material-icons-extended", version.ref = "materialIcons" }
+androidx-espresso-idling-resource = { group = "androidx.test.espresso", name = "espresso-idling-resource", version.ref = "espressoIdlingResource" } # Or your specific icons version
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

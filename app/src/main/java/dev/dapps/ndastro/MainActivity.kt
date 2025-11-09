@@ -1,36 +1,26 @@
 package dev.dapps.ndastro
 
 import android.os.Bundle
-import android.view.View
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import androidx.activity.viewModels
-import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import androidx.navigation.compose.rememberNavController
+import androidx.compose.animation.ExperimentalAnimationApi
 import dagger.hilt.android.AndroidEntryPoint
 import dev.dapps.ndastro.ui.theme.NDAstroTheme
 
-@AndroidEntryPoint
-class MainActivity : ComponentActivity() {
 
-    private val authViewModel by viewModels<MainViewModel>()
+@AndroidEntryPoint
+@ExperimentalAnimationApi
+class MainActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-
-        val content: View = findViewById(android.R.id.content)
-        content.viewTreeObserver.addOnPreDrawListener { authViewModel.authState.value != AuthState.Loading }
-
         setContent {
             NDAstroTheme {
-                val navController = rememberNavController()
-                val authState = authViewModel.authState.collectAsStateWithLifecycle().value
-                if (authState != AuthState.Loading) {
-                    AppNavigator(navController, authState)
-                }
+                NdAstroNavGraph()
             }
         }
     }
 }
+

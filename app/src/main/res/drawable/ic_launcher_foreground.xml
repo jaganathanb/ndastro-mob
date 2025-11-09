@@ -3,7 +3,7 @@
     android:height="108dp"
     android:viewportWidth="500"
     android:viewportHeight="500">
-  <group android:scaleX="0.59011763"
+  <group android:name="vector" android:scaleX="0.59011763"
       android:scaleY="0.59011763"
       android:translateX="103.8366"
       android:translateY="106.56863">

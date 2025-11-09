@@ -25,7 +25,7 @@ android {
     buildTypes {
         debug {
             isMinifyEnabled = false
-            buildConfigField("String", "BASE_URL", "\"10.0.2.2:6001/api/v1\"")
+            buildConfigField("String", "BASE_URL", "\"http://10.0.2.2:6001/api/v1\"")
         }
         release {
             isMinifyEnabled = true
@@ -33,7 +33,7 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro",
             )
-            buildConfigField("String", "BASE_URL", "\"ndastro-api.onrender.com/api/v1/\"")
+            buildConfigField("String", "BASE_URL", "\"https://ndastro-api.onrender.com/api/v1/\"")
         }
     }
 
@@ -66,12 +66,18 @@ dependencies {
     implementation(libs.androidx.compose.ui)
     implementation(libs.androidx.compose.ui.graphics)
     implementation(libs.androidx.compose.ui.tooling)
-    implementation(libs.androidx.compose.material3)
     implementation(libs.androidx.compose.navigation)
+
+    // Material3
+    implementation(libs.androidx.material3)
+    implementation(libs.androidx.compose.material.icons.core)
+    implementation(libs.androidx.compose.material.icons.extended)
 
     // Dependency Injection - Hilt
     implementation(libs.hilt)
     implementation(libs.androidx.hilt.compose.navigation)
+    implementation(libs.androidx.runtime)
+    implementation(libs.androidx.espresso.idling.resource)
     debugImplementation(libs.androidx.ui.tooling)
     ksp(libs.hilt.compiler)
 
@@ -82,6 +88,11 @@ dependencies {
     implementation(libs.ktor.client.logging)
     implementation(libs.ktor.client.content.negotiation)
     implementation(libs.ktor.serialization)
+
+    // Coil - SVG
+    implementation(libs.coil.compose)
+    implementation(libs.coil.network.okhttp)
+    implementation(libs.coil.svg)
 
     // Data Storage - Jetpack DataStore and Encrypted Preferences
     implementation(libs.androidx.datastore.preferences)
