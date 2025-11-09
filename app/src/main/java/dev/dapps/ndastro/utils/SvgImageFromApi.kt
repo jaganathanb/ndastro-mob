@@ -1,9 +1,7 @@
 package dev.dapps.ndastro.utils
 
 import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.size
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.runtime.Composable
@@ -25,7 +23,6 @@ import coil3.request.ImageRequest
 import coil3.request.crossfade
 import coil3.svg.SvgDecoder
 import dev.dapps.ndastro.BuildConfig
-import okhttp3.OkHttpClient
 
 @Composable
 fun SvgImageFromApi(
